@@ -65,7 +65,46 @@ class Content(models.Model):
                                related_name='contents',
                                on_delete=models.CASCADE)
     content_type = models.ForeignKey(ContentType,
-                                     on_delete=models.CASCADE)
+                                     on_delete=models.CASCADE,
+                                     limit_choices_to={
+                                         model_in :(
+                                             'text',
+                                             'video',
+                                             'image',
+                                             'file'   
+                                         )
+                                     })
     object_id = models.PositiveIntegerField()
     item = GenericForeignKey('content_type','object_id')
+    
+    
+# applying the content for the different types for the image, mp3, video etc
+class ItemBase(models.Model):
+    owner = models.ForeignKey(User,
+                              related_name='%(class)s_related',
+                              on_delete=models.CASCADE)
+    title = models.CharField(max_length=150)
+    created = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        abstract = True
+        
+    def __str__(self):
+        return self.title
+    
+class Text(ItemBase):
+    content = models.TextField()
+    
+class File(ItemBase):
+    content = models.FileField(upload_to='files')
+    
+class Image(ItemBase):
+    content = models.FileField(upload_to='images')
+    
+class Video(ItemBase):
+    content = models.URLField()
+    
+    
+    
     
