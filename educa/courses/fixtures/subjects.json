@@ -1,0 +1,126 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Mathmatics",
+    "slug": "mathmatics"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "Basic Programming",
+    "slug": "basic-programming"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 3,
+  "fields": {
+    "title": "Database managment",
+    "slug": "database-managment"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 4,
+  "fields": {
+    "title": "Computer Organisation",
+    "slug": "computer-organisation"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 5,
+  "fields": {
+    "title": "Ethical Hacking",
+    "slug": "ethical-hacking"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": 1,
+    "subject": 2,
+    "title": "Basic programming with C",
+    "slug": "basic-programming-with-c",
+    "overview": "Basic programming with reema threja",
+    "created": "2024-08-27T09:40:24.469Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "owner": 1,
+    "subject": 4,
+    "title": "Computer Organisation and arch",
+    "slug": "computer-organisation-and-arch",
+    "overview": "Basic computer arch .",
+    "created": "2024-08-27T09:41:23.865Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "owner": 1,
+    "subject": 3,
+    "title": "Relation database management",
+    "slug": "relation-database-management",
+    "overview": "First why we need the database.",
+    "created": "2024-08-27T09:43:30.152Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 4,
+  "fields": {
+    "owner": 1,
+    "subject": 5,
+    "title": "Ethical hacking .",
+    "slug": "ethical-hacking",
+    "overview": "Course about ethical hacking an the certification .",
+    "created": "2024-08-27T09:45:11.482Z"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "title": "Introduction",
+    "description": "Know about the history for the C ."
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 2,
+    "title": "Introduction",
+    "description": "This is the chapter for the different system ."
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "course": 3,
+    "title": "First class",
+    "description": "Here we talk about the database and file system ."
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 4,
+  "fields": {
+    "course": 4,
+    "title": "Introduction",
+    "description": "We talked about the different computer networks and protocols ."
+  }
+}
+]
