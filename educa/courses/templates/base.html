@@ -20,7 +20,7 @@
                     <li>
                         <form action="{% url 'logout' %}" method="post" style="display: inline;">
                             {% csrf_token %}
-                            <button type="submit">Sign out</button>
+                            <a href="#" onclick="this.closest('form').submit(); return false;">Sign out</a>
                         </form>
                     </li>
                 {% else %}
