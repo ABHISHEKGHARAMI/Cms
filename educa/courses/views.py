@@ -103,14 +103,12 @@ class ContentCreateUpdateView(TemplateResponseMixin,View):
     
     def get_model(self,model_name):
         if model_name in ['text','image','video','file']:
-            return apps.get_model(app_label='courses',
-                                  model_name=model_name)
+            model = apps.get_model(app_label='courses', model_name=model_name)
+            return model
         return None
     
     def get_form(self,model,*args,**kwargs):
-        Form = modelform_factory(model,
-                                 exclude=['owner','order','created','updated'])
-        
+        Form = modelform_factory(model,exclude=['owner','order','created','updated'])
         return Form(*args,**kwargs)
     
     def dispatch(self,request,module_id,model_name,id=None):
