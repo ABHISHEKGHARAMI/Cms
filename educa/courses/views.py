@@ -108,16 +108,16 @@ class ContentCreateUpdateView(TemplateResponseMixin,View):
         return None
     
     def get_form(self,model,*args,**kwargs):
-        Form = modelform_factory(model,exclude=['owner','order','created','updated'])
+        Form = modelform_factory(model,exclude=['owner',
+                                                'order',
+                                                'created',
+                                                'updated'])
         return Form(*args,**kwargs)
     
     def dispatch(self,request,module_id,model_name,id=None):
-        self.module = get_object_or_404(
-            Module,
-            id=module_id,
-            course__owner = request.user
-        )
-        
+        self.module = get_object_or_404(Module,
+                                        id=module_id,
+                                        course__owner = request.user)
         self.model = self.get_model(model_name)
         
         
@@ -125,12 +125,11 @@ class ContentCreateUpdateView(TemplateResponseMixin,View):
             self.obj = get_object_or_404(self.model,
                                          id=id,
                                          owner=request.user)
-            
         return super().dispatch(request,module_id,model_name,id)
     
     
     def get(self,request,module_id,model_name,id=None):
-        form = self.get_form(model_name,instance=self.obj)
+        form = self.get_form(self.model,instance=self.obj)
         return self.render_to_response({
             'form' : form,
             'object' : self.obj
