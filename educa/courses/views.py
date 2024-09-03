@@ -9,6 +9,7 @@ from django.apps import apps
 from .models import Course , Module , Content
 from .forms import ModuleFormSet
 from django.urls import reverse_lazy
+from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 # Create your views here.
 
 class CourseListView(ListView):
@@ -182,4 +183,31 @@ class ModuleContentListView(TemplateResponseMixin, View):
         return self.render_to_response({
             'module':module
         })
+
+# module order view
+class ModuleOrderView(CsrfExemptMixin,
+                      JsonRequestResponseMixin,
+                      View):
+    def post(self,request):
+        for id,order in self.request_json.items():
+            Module.objects.filter(
+                id=id,
+                course__owner = request.user
+            ).update(order=order)
+        return self.render_json_response({
+            'saved' : 'ok'
+        })
         
+# content order view
+class ContentOrderView(CsrfExemptMixin,
+                       JsonRequestResponseMixin,
+                       View):
+    def post(self,request):
+        for id,order in self.request_json.items():
+            Module.objects.filter(
+                id=id,
+                course__owner=request.user
+            ).update(order=order)
+        return self.render_json_response({
+            'saved':'ok'
+        })
