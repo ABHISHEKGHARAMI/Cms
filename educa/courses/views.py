@@ -10,6 +10,8 @@ from .models import Course , Module , Content
 from .forms import ModuleFormSet
 from django.urls import reverse_lazy
 from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
+from django.db.models import Count
+from .models import Subject
 # Create your views here.
 
 class CourseListView(ListView):
@@ -211,3 +213,28 @@ class ContentOrderView(CsrfExemptMixin,
         return self.render_json_response({
             'saved':'ok'
         })
+
+
+# adding the list for the all the course
+class CourseListView(TemplateResponseMixin,View):
+    model = Course
+    template_name = 'courses/course/list.html'
+    
+    def get(self,request,subject=None):
+        subjects = Subject.objects.annotate(
+            total_courses = Count('courses')
+        )
+        
+        modules = Module.objects.annotate(
+            total_module = Count('modules')
+        )
+        
+        if subject :
+            subject = get_object_or_404(Subject,slug=subject)
+            courses = courses.filter(subject=subject)
+        
+        return self.render_to_response({
+            'subjects' : subjects,
+            'subject' : subject,
+            'courses' : courses
+         })
