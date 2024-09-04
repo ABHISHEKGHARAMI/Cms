@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView , FormView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate , login
+from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import CourseEnrollForm
 # Create your views here.
 
 
@@ -19,3 +21,20 @@ class StudentRegistrationView(CreateView):
                             password=cd['password1'])
         login(self.request,user)
         return result
+
+
+# view for the student enroll for the course view
+class StudentEnrollView(LoginRequiredMixin,FormView):
+    course = None
+    form_class = FormView
+    
+    
+    def form_valid(self,form):
+        self.course = form.cleaned_data['course']
+        self.course.students.add(self.request.user)
+        return super().form_valid(form)
+    
+    def get_success_url(self):
+        return reverse_lazy('student_course_detail',
+                            args=[self.course.id])
+        
