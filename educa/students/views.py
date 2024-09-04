@@ -24,7 +24,7 @@ class StudentRegistrationView(CreateView):
 
 
 # view for the student enroll for the course view
-class StudentEnrollView(LoginRequiredMixin,FormView):
+class StudentEnrollCourseView(LoginRequiredMixin,FormView):
     course = None
     form_class = FormView
     
