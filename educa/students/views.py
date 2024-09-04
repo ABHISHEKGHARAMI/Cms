@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate , login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CourseEnrollForm
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from courses.models import Course
 # Create your views here.
 
@@ -46,6 +47,17 @@ class StudentCourseListView(LoginRequiredMixin,ListView):
     template_name = 'students/course/list.html'
     
     
+    def get_queryset(self):
+        qs = super().get_queryset()
+        return qs.filter(students__in=[self.request.user])
+    
+    
+class StudentCourseDetailView(DetailView):
+    model = Course
+    template_name = 'students/course/detail.html'
+    
+    
+    # fetching the related details
     def get_queryset(self):
         qs = super().get_queryset()
         return qs.filter(students__in=[self.request.user])
