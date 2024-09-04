@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate , login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CourseEnrollForm
+from django.views.generic.list import ListView
+from courses.models import Course
 # Create your views here.
 
 
@@ -36,4 +38,16 @@ class StudentEnrollCourseView(LoginRequiredMixin,FormView):
     def get_success_url(self):
         return reverse_lazy('student_course_detail',
                             args=[self.course.id])
+        
+        
+# fetching the actual content for the study material
+class StudentCourseListView(LoginRequiredMixin,ListView):
+    model = Course
+    template_name = 'students/course/list.html'
+    
+    
+    def get_queryset(self):
+        qs = super().get_queryset()
+        return qs.filter(students__in=[self.request.user])
+        
         
