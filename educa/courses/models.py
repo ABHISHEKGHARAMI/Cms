@@ -4,6 +4,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from .fields import OrderField
 from django.template.loader import render_to_string
+from embed_video.fields import EmbedVideoField
 # Create your models here.
 
 
@@ -119,7 +120,7 @@ class Image(ItemBase):
     content = models.FileField(upload_to='images')
     
 class Video(ItemBase):
-    content = models.URLField()
+    content = EmbedVideoField()
     
     
     
