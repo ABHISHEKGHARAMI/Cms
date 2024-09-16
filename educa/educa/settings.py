@@ -132,3 +132,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # creating super user uname : Admin Upass : Admin001@
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
+
+
+EMBED_VIDEO_BACKENDS = (
+    'embed_video.backends.YoutubeBackend',
+    'embed_video.backends.VimeoBackend',
+)
