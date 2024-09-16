@@ -119,7 +119,7 @@ class File(ItemBase):
     content = models.FileField(upload_to='files')
     
 class Image(ItemBase):
-    content = models.FileField(upload_to='images')
+    content = models.ImageField(upload_to='images')
     
 class Video(ItemBase):
     content = EmbedVideoField()
