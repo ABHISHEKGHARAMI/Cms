@@ -138,3 +138,11 @@ EMBED_VIDEO_BACKENDS = (
     'embed_video.backends.YoutubeBackend',
     'embed_video.backends.VimeoBackend',
 )
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
