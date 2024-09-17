@@ -5539,3 +5539,693 @@ DEBUG 2024-09-17 10:19:10,986 autoreload File /home/abhishek/Documents/cms/Cms/p
 DEBUG 2024-09-17 10:19:11,014 autoreload File /home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/conf/locale/en/__init__.py first seen with mtime 1724748347.154993
 DEBUG 2024-09-17 10:19:11,015 autoreload File /home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/contrib/messages/context_processors.py first seen with mtime 1724748355.3780077
 DEBUG 2024-09-17 10:19:11,024 autoreload File /home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/conf/locale/en/formats.py first seen with mtime 1724748347.1569932
+INFO 2024-09-17 10:20:34,945 middleware Incoming request: GET /api/subjects/
+DEBUG 2024-09-17 10:20:34,952 utils (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-09-17 10:20:34.947569' AND "django_session"."session_key" = 'wcun658249fmrqkj3j4uw7bezvo979im') LIMIT 21; args=('2024-09-17 10:20:34.947569', 'wcun658249fmrqkj3j4uw7bezvo979im'); alias=default
+DEBUG 2024-09-17 10:20:34,959 utils (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 5 LIMIT 21; args=(5,); alias=default
+DEBUG 2024-09-17 10:20:34,965 utils (0.001) SELECT "courses_subject"."id", "courses_subject"."title", "courses_subject"."slug" FROM "courses_subject" ORDER BY "courses_subject"."title" ASC; args=(); alias=default
+INFO 2024-09-17 10:20:34,969 middleware Response status: 200
+INFO 2024-09-17 10:20:35,166 basehttp "GET /api/subjects/ HTTP/1.1" 200 313
+INFO 2024-09-17 10:20:35,395 middleware Incoming request: GET /__debug__/history_sidebar/?store_id=6363d4899d7348c883d3364ef990099d
+DEBUG 2024-09-17 10:20:35,398 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.history.panel.HistoryPanel object at 0x7cb3342c6860>}]
+DEBUG 2024-09-17 10:20:35,401 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.versions.VersionsPanel object at 0x7cb3342c6080>}]
+DEBUG 2024-09-17 10:20:35,403 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.timer.TimerPanel object at 0x7cb3342c4970>}]
+DEBUG 2024-09-17 10:20:35,405 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.settings.SettingsPanel object at 0x7cb3342c5db0>}]
+DEBUG 2024-09-17 10:20:35,407 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.headers.HeadersPanel object at 0x7cb3342c6350>}]
+DEBUG 2024-09-17 10:20:35,410 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.request.RequestPanel object at 0x7cb3342c60b0>}]
+DEBUG 2024-09-17 10:20:35,413 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.sql.panel.SQLPanel object at 0x7cb3342c6b90>}]
+DEBUG 2024-09-17 10:20:35,415 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.staticfiles.StaticFilesPanel object at 0x7cb3342c7f10>}]
+DEBUG 2024-09-17 10:20:35,417 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.templates.panel.TemplatesPanel object at 0x7cb3342c68f0>}]
+DEBUG 2024-09-17 10:20:35,420 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.alerts.AlertsPanel object at 0x7cb3342c6620>}]
+DEBUG 2024-09-17 10:20:35,422 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.cache.CachePanel object at 0x7cb3342c72b0>}]
+DEBUG 2024-09-17 10:20:35,425 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.signals.SignalsPanel object at 0x7cb3342c4160>}]
+INFO 2024-09-17 10:20:35,428 middleware Response status: 200
+INFO 2024-09-17 10:20:35,429 basehttp "GET /__debug__/history_sidebar/?store_id=6363d4899d7348c883d3364ef990099d HTTP/1.1" 200 10193
+INFO 2024-09-17 10:21:02,728 middleware Incoming request: GET /api/subjects/4/
+DEBUG 2024-09-17 10:21:02,734 utils (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-09-17 10:21:02.730001' AND "django_session"."session_key" = 'wcun658249fmrqkj3j4uw7bezvo979im') LIMIT 21; args=('2024-09-17 10:21:02.730001', 'wcun658249fmrqkj3j4uw7bezvo979im'); alias=default
+DEBUG 2024-09-17 10:21:02,741 utils (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 5 LIMIT 21; args=(5,); alias=default
+DEBUG 2024-09-17 10:21:02,746 utils (0.000) SELECT "courses_subject"."id", "courses_subject"."title", "courses_subject"."slug" FROM "courses_subject" WHERE "courses_subject"."id" = 4 LIMIT 21; args=(4,); alias=default
+INFO 2024-09-17 10:21:02,751 middleware Response status: 200
+INFO 2024-09-17 10:21:02,833 basehttp "GET /api/subjects/4/ HTTP/1.1" 200 71
+INFO 2024-09-17 10:21:03,055 middleware Incoming request: GET /__debug__/history_sidebar/?store_id=200baca3d0b94a338ac4cb7c71a73ef1
+DEBUG 2024-09-17 10:21:03,060 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.history.panel.HistoryPanel object at 0x7cb3342c7580>}]
+DEBUG 2024-09-17 10:21:03,062 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.versions.VersionsPanel object at 0x7cb3342c7160>}]
+DEBUG 2024-09-17 10:21:03,065 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.timer.TimerPanel object at 0x7cb3342c4c70>}]
+DEBUG 2024-09-17 10:21:03,067 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.settings.SettingsPanel object at 0x7cb3342c52d0>}]
+DEBUG 2024-09-17 10:21:03,069 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.headers.HeadersPanel object at 0x7cb3342c7d60>}]
+DEBUG 2024-09-17 10:21:03,071 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.request.RequestPanel object at 0x7cb3342c77f0>}]
+DEBUG 2024-09-17 10:21:03,074 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.sql.panel.SQLPanel object at 0x7cb3342c7b50>}]
+DEBUG 2024-09-17 10:21:03,078 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.staticfiles.StaticFilesPanel object at 0x7cb3342c5b10>}]
+DEBUG 2024-09-17 10:21:03,080 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.templates.panel.TemplatesPanel object at 0x7cb3342c51e0>}]
+DEBUG 2024-09-17 10:21:03,083 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.alerts.AlertsPanel object at 0x7cb3342c4760>}]
+DEBUG 2024-09-17 10:21:03,085 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.cache.CachePanel object at 0x7cb3342c7130>}]
+DEBUG 2024-09-17 10:21:03,087 base Exception while resolving variable 'toolbar' in template 'debug_toolbar/includes/panel_content.html'.
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'Context' has no attribute 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'toolbar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [toolbar] in [{'True': True, 'False': False, 'None': None}, {'panel': <debug_toolbar.panels.signals.SignalsPanel object at 0x7cb3342c6200>}]
+INFO 2024-09-17 10:21:03,090 middleware Response status: 200
+INFO 2024-09-17 10:21:03,091 basehttp "GET /__debug__/history_sidebar/?store_id=200baca3d0b94a338ac4cb7c71a73ef1 HTTP/1.1" 200 10195
