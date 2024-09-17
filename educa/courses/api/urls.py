@@ -9,7 +9,7 @@ urlpatterns = [
     path('subjects/',
          views.SubjectListView.as_view(),
          name='subject_list'),
-    path('subjects/<pk>/',
+    path('subjects/<int:pk>/',
          views.SubjectDetailView.as_view(),
          name='subject_detail'),
     
