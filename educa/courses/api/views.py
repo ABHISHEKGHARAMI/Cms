@@ -6,6 +6,10 @@ from courses.models import Subject , Course
 from courses.api.serializers import SubjectSerializer, CourseSerializer
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import status
+from drf_yasg import openapi
+from rest_framework.response import Response
 
 class SubjectListView(generics.ListAPIView):
     queryset = Subject.objects.all()
