@@ -10,6 +10,12 @@ from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
 from drf_yasg import openapi
 from rest_framework.response import Response
+import logging
+
+
+# create a logger instance
+# Create a logger instance
+logger = logging.getLogger(__name__)
 
 class SubjectListView(generics.ListAPIView):
     queryset = Subject.objects.all()
