@@ -33,6 +33,8 @@ class CourseEnrollView(APIView):
                                          'application/json': {'enrolled': True}})},
     )
     def post(self,request,pk,format=None):
+        logger.info(
+            f'POST request for Course ID: {pk} from user: {request.user}')
         course = get_object_or_404(Course,pk=pk)
         course.students.add(request.user)
         return Response({
