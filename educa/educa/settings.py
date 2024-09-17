@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from django.urls import reverse_lazy
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -168,4 +169,44 @@ REST_FRAMEWORK = {
  'DEFAULT_PERMISSION_CLASSES': [
  'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
  ]
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'middleware_file': {
+            'level': 'DEBUG',  # Adjust this level as needed
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'django_middleware.log'),
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['middleware_file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'myproject.middleware': {
+            'handlers': ['middleware_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
 }
