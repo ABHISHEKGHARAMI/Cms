@@ -4973,3 +4973,6 @@ DEBUG 2024-09-17 10:07:27,581 autoreload File /home/abhishek/Documents/cms/Cms/p
 DEBUG 2024-09-17 10:07:27,584 autoreload File /home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/contrib/contenttypes/migrations/__init__.py first seen with mtime 1724748352.9540033
 DEBUG 2024-09-17 10:07:27,586 autoreload File /home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/contrib/contenttypes/migrations/0001_initial.py first seen with mtime 1724748352.9530034
 DEBUG 2024-09-17 10:07:27,587 autoreload File /home/abhishek/Documents/cms/Cms/py-env/lib/python3.10/site-packages/django/contrib/auth/migrations/0009_alter_user_last_name_max_length.py first seen with mtime 1724748352.191002
+DEBUG 2024-09-17 10:10:25,285 autoreload File /home/abhishek/Documents/cms/Cms/educa/educa/settings.py previous mtime: 1726567640.7850773, current mtime: 1726567824.8078783
+DEBUG 2024-09-17 10:10:25,286 autoreload /home/abhishek/Documents/cms/Cms/educa/educa/settings.py notified as changed. Signal results: [(<function template_changed at 0x78c7150ffc70>, None), (<function translation_file_changed at 0x78c714557370>, None)].
+INFO 2024-09-17 10:10:25,287 autoreload /home/abhishek/Documents/cms/Cms/educa/educa/settings.py changed, reloading.

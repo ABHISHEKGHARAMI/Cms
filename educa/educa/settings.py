@@ -186,26 +186,32 @@ LOGGING = {
         },
     },
     'handlers': {
-        'middleware_file': {
+        'file': {
             'level': 'DEBUG',  # Adjust this level as needed
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'django_middleware.log'),
+            'filename': os.path.join(BASE_DIR, 'django_debug.log'),
             'formatter': 'verbose',
         },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
+        'error_file': {
+            'level': 'ERROR',  # For error logs
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'django_errors.log'),
+            'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['middleware_file', 'console'],
-            'level': 'DEBUG',
-            'propagate': True,
+            'handlers': ['file'],
+            'level': 'DEBUG',  # Adjust this level as needed
+            'propagate': False,
         },
-        'myproject.middleware': {
-            'handlers': ['middleware_file'],
+        'django.request': {
+            'handlers': ['error_file'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'educa.middleware': {  # Update this to match your project and middleware
+            'handlers': ['file'],
             'level': 'DEBUG',
             'propagate': False,
         },
