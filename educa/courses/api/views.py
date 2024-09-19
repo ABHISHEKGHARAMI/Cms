@@ -10,6 +10,7 @@ from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
 from drf_yasg import openapi
 from rest_framework.response import Response
+from rest_framework import viewsets
 import logging
 
 
@@ -46,6 +47,11 @@ class CourseEnrollView(APIView):
         return Response({
             'enrolled' : True
         }, status=status.HTTP_200_OK)
+        
+# class for the view set
+class CourseViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
         
     
 
