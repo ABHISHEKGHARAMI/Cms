@@ -36,6 +36,9 @@ urlpatterns = [
     path('courses/<int:pk>/enroll/',
          views.CourseEnrollView.as_view(),
          name='course_enroll'),
+    path('courses/<pk>/enroll/',
+         views.CourseEnrollView.as_view(),
+         name='course_enroll'),
     # Swagger documentation URLs
     path('swagger/', schema_view.with_ui('swagger',
          cache_timeout=0), name='schema-swagger-ui'),
