@@ -30,7 +30,7 @@ class SubjectDetailView(generics.RetrieveAPIView):
     
     
 # Adding the custom api view for the enrolling the course for the student
-class CourseEnrollView(APIView):
+'''class CourseEnrollView(APIView):
     authentication_classes = [BasicAuthentication]
     permission_classes = [IsAuthenticated]
     
@@ -47,7 +47,7 @@ class CourseEnrollView(APIView):
         course.students.add(request.user)
         return Response({
             'enrolled' : True
-        }, status=status.HTTP_200_OK)
+        }, status=status.HTTP_200_OK)'''
         
 # class for the view set
 class CourseViewSet(viewsets.ReadOnlyModelViewSet):
