@@ -1,11 +1,15 @@
-from django.urls import path
+from django.urls import path ,include
 from . import views
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
+from rest_framework import routers
 
 
 app_name = 'courses'
+
+router = routers.DefaultRouter()
+router.register('course',views.CourseViewSet)
 
 # schema for the swagger
 schema_view = get_schema_view(
@@ -38,5 +42,6 @@ urlpatterns = [
     # Redoc documentation URLs (optional)
     path('redoc/', schema_view.with_ui('redoc',
          cache_timeout=0), name='schema-redoc'),
+    path('',include(router.urls)),
     
 ]
