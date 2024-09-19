@@ -54,7 +54,7 @@ MIDDLEWARE = [
     #'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.cache.FetchFromCacheMiddleware',
-    'educa.middleware.LoggingMiddleware',
+    #'educa.middleware.LoggingMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -172,7 +172,7 @@ REST_FRAMEWORK = {
  ]
 }
 
-LOGGING = {
+'''LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
@@ -216,4 +216,4 @@ LOGGING = {
             'propagate': False,
         },
     },
-}
+}'''
