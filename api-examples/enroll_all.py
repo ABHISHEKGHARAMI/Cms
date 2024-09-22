@@ -19,7 +19,7 @@ print(f'Available courses : {available_courses}')
 for course in courses:
     course_id = course['id']
     course_title = course['title']
-    r = requests.post(f'{base_url}/course/{course_id}/enroll/',
+    r = requests.post(f'{base_url}course/{course_id}/enroll/',
                       auth=(username,password))
     
     if r.status_code == 200:
