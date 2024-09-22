@@ -237,7 +237,7 @@ class CourseListView(TemplateResponseMixin,View):
         
         if subject :
             subject = get_object_or_404(Subject,slug=subject)
-            courses = courses.filter(subject=subject)
+            #courses = courses.filter(subject=subject)
             key = f'subject_{subject.id}_courses'
             courses = cache.get(key)
             if not courses:
