@@ -40,4 +40,22 @@ class ContentSerializer(serializers.ModelSerializer):
         model = Content
         fields = ['order','item']
         
+
+
+# class with alternative content serializer
+class ModuleWithContentSerializer(serializers.ModelSerializer):
+    contents = ContentSerializer(many=True)
+    class Meta:
+        model = Module
+        fields = ['order','title','description','content']
+        
+        
+# alternative serializer for course
+class CourseWithContentSerializer(serializers.ModelSerializer):
+    modules = ModuleSerializer(many=True)
+    class Meta:
+        model = Course
+        fields = ['id','subject','title','slug',
+                  'overview','created','owner','modules']
+    
         
