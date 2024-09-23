@@ -19,10 +19,7 @@
 {% endblock %}
 
 {% block domready %}
-      const courseId = JSON.parse(
-    document.getElementById('course-id').textContent
-    );
-    const url = 'ws://' + window.location.host +
-    '/ws/chat/room/' + courseId + '/';
+    const courseId = JSON.parse(document.getElementById('course-id').textContent);
+    const url = 'ws://' + window.location.host +'/ws/chat/room/' + courseId + '/';
     const chatSocket = new WebSocket(url);
 {% endblock %}
