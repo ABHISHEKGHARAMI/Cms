@@ -2,6 +2,7 @@ asgiref==3.8.1
 async-timeout==4.0.3
 attrs==24.2.0
 certifi==2024.8.30
+channels==4.1.0
 charset-normalizer==3.3.2
 Django==5.1
 django-braces==1.15.0
