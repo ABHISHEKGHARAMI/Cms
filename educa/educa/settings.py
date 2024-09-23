@@ -174,6 +174,8 @@ REST_FRAMEWORK = {
  ]
 }
 
+
+ASGI_APPLICATION = 'educa.routing.application'
 '''LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
