@@ -5,5 +5,5 @@ app_name='chat'
 # url patterns for the new urls
 
 urlpatterns = [
-    path('room/<int:id>/',views.course_chat_room,name='course_chat_room'),
+    path('room/<int:course_id>/',views.course_chat_room,name='course_chat_room'),
 ]
