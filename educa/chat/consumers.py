@@ -5,16 +5,13 @@ from channels.generic.websocket import WebsocketConsumer
 
 
 class ChatConsumer(WebsocketConsumer):
-    # check for the connection
     def connect(self):
+        # accept connection
         self.accept()
-        
-    # disconnect the connection
-    def disconnect(self,close_code):
+    def disconnect(self, close_code):
         pass
-    
-    # get the message
-    def receive(self,text_data):
+    # receive message from WebSocket
+    def receive(self, text_data):
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
         # send message to WebSocket
