@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'courses.apps.CoursesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,7 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'chat',
-    'channels',
+    
 ]
 
 MIDDLEWARE = [
