@@ -5,19 +5,24 @@
 
 {% block content %}
 
-  <div id="chat">
-  </div>
-  <div id="chat-input">
-    <input type="text" id="chat-message-input">
-    <input type="submit" id="chat-message-submit" value="Send">
-  </div>
+    <div id="chat">
+    </div>
+    <div id="chat-input">
+      <input type="text" id="chat-message-input">
+      <input type="submit" id="chat-message-submit" value="Send">
+    </div>
 
 {% endblock %}
 
 {% block include_js %}
-
+   {{ course.id|json_script:"course-id" }}
 {% endblock %}
 
 {% block domready %}
-
+      const courseId = JSON.parse(
+    document.getElementById('course-id').textContent
+    );
+    const url = 'ws://' + window.location.host +
+    '/ws/chat/room/' + courseId + '/';
+    const chatSocket = new WebSocket(url);
 {% endblock %}
