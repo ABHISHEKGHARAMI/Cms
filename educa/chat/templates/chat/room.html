@@ -29,7 +29,7 @@
       const data = JSON.parse(event.data);
       const chat = document.getElementById('chat');
 
-      chat.innerHtml += '<div class="message">'+ data.message +'</div>';
+      chat.innerHTML += '<div class="message">'+ data.message +'</div>';
       chat.scrollTop = chat.scollHeight;
     };
 
