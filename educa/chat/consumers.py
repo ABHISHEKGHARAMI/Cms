@@ -8,6 +8,7 @@ from django.utils import timezone
 
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
+        self.user = self.scope['user']
         self.id = self.scope['url_route']['kwargs']['course_id']
         self.room_group_name = f'char_{self.id}'
         # join room group
