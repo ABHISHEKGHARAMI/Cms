@@ -25,6 +25,7 @@ inflection==0.5.1
 msgpack==1.1.0
 packaging==24.1
 pillow==10.4.0
+psycopg==3.2.2
 pyasn1==0.6.1
 pyasn1_modules==0.4.1
 pycparser==2.22
