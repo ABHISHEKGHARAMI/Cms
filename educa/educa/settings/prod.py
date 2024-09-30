@@ -9,7 +9,7 @@ ADMINs = [
 ]
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['educaproject.com', 'www.educaproject.com']
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
