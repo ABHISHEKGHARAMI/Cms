@@ -14,6 +14,7 @@ This is a content management system (CMS) designed for educational startups to m
 
 ## Technologies Used
 - **Django**: Web framework for building the application.
+- **Django RESTapi**: Web framework for the app.
 - **Django Channels**: For WebSocket support.
 - **PostgreSQL**: Database for storing content.
 - **Redis**: Caching and session management.
