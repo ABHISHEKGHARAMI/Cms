@@ -12,24 +12,11 @@ import os
 from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter,URLRouter
 from channels.auth import AuthMiddlewareStack
-from chat.routing import websocket_urlpatterns
-from channels.security.websocket import AllowedHostsOriginValidator
 
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'educa.settings')
 
-django_asgi_app = get_asgi_application()
-
-# Define how to handle different protocol types (HTTP and WebSocket)
-application = ProtocolTypeRouter({
-    'http': django_asgi_app,  # HTTP requests handled by Django
-    'websocket': AllowedHostsOriginValidator(
-        AuthMiddlewareStack(  # WebSocket requests handled by Channels
-            URLRouter(
-                websocket_urlpatterns  # WebSocket routes from chat app
-            )
-        )),
-})
+application = get_asgi_application()
 
 
