@@ -37,7 +37,7 @@ To run the application locally, use the following command:
 
 ```bash
 python manage.py runserver
-
+```
 
 
 ## License
