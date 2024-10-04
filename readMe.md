@@ -31,3 +31,9 @@ This is a content management system (CMS) designed for educational startups to m
    git clone https://github.com/ABHISHEKGHARAMI/Cms.git
    cd Cms
 
+## Running the Application Locally
+
+To run the application locally, use the following command:
+
+```bash
+python manage.py runserver
